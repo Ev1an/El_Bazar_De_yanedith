@@ -2,7 +2,7 @@
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Bazar de Yanedith | Tienda Online Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -85,43 +85,6 @@
             visibility: visible;
             transform: translateY(0);
         }
-
-        /* Animaciones */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        
-        .animate-fade-out {
-            animation: fadeOut 0.3s ease-in-out;
-        }
-        
-        @keyframes bounceSlow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .animate-bounce-slow {
-            animation: bounceSlow 2s infinite;
-        }
-        
-        @keyframes cartBounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-        
-        .animate-cart-bounce {
-            animation: cartBounce 0.5s;
-        }
     </style>
 </head>
 <body class="font-poppins bg-gray-50 dark:bg-dark transition-colors duration-300">
@@ -159,6 +122,7 @@
                         </div>
                     </div>
                     <a href="#" class="nav-link relative text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light">Sobre Nosotros</a>
+
                 </nav>
 
                 <!-- Controles -->
@@ -173,13 +137,19 @@
                     <button id="cart-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors relative">
                         <i class="fas fa-shopping-cart"></i>
                         <span id="cart-count" class="absolute -top-1 -right-1 bg-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
-                
+                    </button>
+                    <button id="mobile-menu-toggle" class="hidden sm:hidden md:hidden p-2 rounded-full bg-gray-200 dark:bg-dark-lighter text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Mobile Menu - Mejorado para responsividad -->
+    <!-- Mobile Menu -->
+  
+       
+    </div>
 
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24 overflow-hidden">
@@ -194,6 +164,9 @@
                     <div class="flex space-x-4">
                         <a href="#products" class="px-6 py-3 bg-white text-primary font-medium rounded-full shadow-lg hover:bg-gray-100 transition-colors">Ver Productos</a>
                     </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-float">
+                    <img src="https://via.placeholder.com/500x400" alt="Producto destacado" class="rounded-lg shadow-2xl max-w-full h-auto">
                 </div>
             </div>
         </div>
@@ -306,7 +279,7 @@
                         <i class="fas fa-shield-alt text-2xl text-primary"></i>
                     </div>
                     <h3 class="text-xl font-medium text-gray-800 dark:text-white mb-2">Pago Seguro</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Pago presencial o por transferencia</p>
+                    <p class="text-gray-600 dark:text-gray-400">Pago presencial o por transferencia </p>
                 </div>
                 <div class="bg-white dark:bg-dark-lighter rounded-lg shadow-md p-6 text-center">
                     <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mx-auto mb-4">
@@ -353,6 +326,7 @@
                         <li><a href="#" class="hover:text-primary transition-colors">Inicio</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Productos</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Sobre Nosotros</a></li>
+
                     </ul>
                 </div>
                 <div>
@@ -369,12 +343,13 @@
                     <ul class="space-y-3">
                         <li class="flex items-start space-x-3">
                             <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
-                            <span>Calle Altarriba #14, 10 de Octubre, La Habana, Cuba</span>
+                            <span>Calle Altarriba #14, 10 de Octubre , La Habana , Cuba</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i class="fas fa-phone-alt text-primary"></i>
                             <span>+53 55443833</span>
                         </li>
+                     
                     </ul>
                 </div>
             </div>
@@ -444,7 +419,7 @@
     </button>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/55443833" target="_blank" class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center z-40 animate-bounce-slow">
+    <a href="https://wa.me/5355555555" target="_blank" class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition-colors flex items-center justify-center z-40 animate-bounce-slow">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
@@ -768,22 +743,37 @@
             updatePriceRangeValue();
         }
 
-        // Función para mostrar/ocultar el carrito
-        function toggleCart() {
+        // Función para actualizar los precios mostrados
+        function updateProductPrices() {
+            document.querySelectorAll('.product-price').forEach(element => {
+                const productId = parseInt(element.closest('.product-card').getAttribute('data-id'));
+                const product = products.find(p => p.id === productId);
+                
+                if (product) {
+                    if (isCUP) {
+                        const priceInCUP = product.originalPriceUSD ? product.originalPriceUSD * exchangeRate : product.price;
+                        element.innerHTML = `
+                            <span class="text-lg font-bold text-primary">${priceInCUP.toLocaleString()} CUP</span>
+                            ${product.originalPriceUSD ? `<span class="text-sm text-gray-500 dark:text-gray-500 ml-2">${product.originalPriceUSD} USD</span>` : ''}
+                        `;
+                    } else {
+                        const priceInUSD = product.originalPriceUSD ? product.originalPriceUSD : (product.price / exchangeRate).toFixed(2);
+                        element.innerHTML = `
+                            <span class="text-lg font-bold text-primary">$${priceInUSD}</span>
+                            ${product.originalPriceUSD ? '' : `<span class="text-sm text-gray-500 dark:text-gray-500 ml-2">${(product.price / exchangeRate).toFixed(2)} USD</span>`}
+                        `;
+                    }
+                }
+            });
+        }
+ // Función para mostrar/ocultar el carrito
+ function toggleCart() {
             document.getElementById('cart-sidebar').classList.toggle('translate-x-full');
         }
 
-        // Función para mostrar/ocultar el menú móvil - Mejorada
+        // Función para mostrar/ocultar el menú móvil
         function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-            
-            // Asegurarse de que el menú no se desplace fuera de la pantalla
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.style.position = 'relative';
-                mobileMenu.style.width = '100%';
-                mobileMenu.style.left = '0';
-            }
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         }
 
         // Función para desplazarse al inicio de la página
@@ -810,26 +800,22 @@
             shippingContainer.classList.toggle('hidden', !this.checked);
         }
 
-        // Función para actualizar los precios mostrados
+        // Función para actualizar los precios según la moneda seleccionada
         function updateProductPrices() {
-            document.querySelectorAll('.product-price').forEach(element => {
-                const productId = parseInt(element.closest('.product-card').getAttribute('data-id'));
-                const product = products.find(p => p.id === productId);
-                
-                if (product) {
-                    if (isCUP) {
-                        const priceInCUP = product.originalPriceUSD ? product.originalPriceUSD * exchangeRate : product.price;
-                        element.innerHTML = `
-                            <span class="text-lg font-bold text-primary">${priceInCUP.toLocaleString()} CUP</span>
-                            ${product.originalPriceUSD ? `<span class="text-sm text-gray-500 dark:text-gray-500 ml-2">${product.originalPriceUSD} USD</span>` : ''}
-                        `;
-                    } else {
-                        const priceInUSD = product.originalPriceUSD ? product.originalPriceUSD : (product.price / exchangeRate).toFixed(2);
-                        element.innerHTML = `
-                            <span class="text-lg font-bold text-primary">$${priceInUSD}</span>
-                            ${product.originalPriceUSD ? '' : `<span class="text-sm text-gray-500 dark:text-gray-500 ml-2">${(product.price / exchangeRate).toFixed(2)} USD</span>`}
-                        `;
-                    }
+            document.querySelectorAll('.product-price').forEach((element, index) => {
+                const product = products[index];
+                if (isCUP) {
+                    element.innerHTML = `
+                        <span class="text-lg font-bold text-primary">${product.price.toLocaleString()} CUP</span>
+                        ${product.originalPrice ? `<span class="text-sm text-gray-500 dark:text-gray-500 line-through ml-2">${product.originalPrice.toLocaleString()} CUP</span>` : ''}
+                    `;
+                } else {
+                    const usdPrice = (product.price / exchangeRate).toFixed(2);
+                    const originalUsdPrice = product.originalPrice ? (product.originalPrice / exchangeRate).toFixed(2) : null;
+                    element.innerHTML = `
+                        <span class="text-lg font-bold text-primary">$${usdPrice}</span>
+                        ${originalUsdPrice ? `<span class="text-sm text-gray-500 dark:text-gray-500 line-through ml-2">$${originalUsdPrice}</span>` : ''}
+                    `;
                 }
             });
         }
@@ -1011,7 +997,7 @@
                 message += `%0A*Dirección de envío:* ${shippingAddress}`;
             }
 
-            window.open(`https://wa.me/55443833?text=${message}`, '_blank');
+            window.open(`https://wa.me/5355555555?text=${message}`, '_blank');
         }
     </script>
 </body>
